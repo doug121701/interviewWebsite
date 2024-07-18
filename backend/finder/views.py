@@ -16,17 +16,15 @@ headers = {
 
 def index(incoming):
     # get lat/long from the request
-    lat = incoming.GET.get('latitude', None)
-    long = incoming.GET.get('longitude', None)
+    address = incoming.GET.get('address', None)
     
     # None specified, return error
-    if lat == None or long == None:
-        return JsonResponse({'error' : 'No latitude or longitude provided'}, status = 400)
+    if address == None:
+        return JsonResponse({'error' : 'No address provided'}, status = 400)
 
     # request nearest from yelp api
     params = {
-        "latitude": lat,
-        "longitude": long,
+        "location": address,
         "term": "taco truck",
         "limit": 10
     }
