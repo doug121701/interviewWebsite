@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header-style {
+  margin-top: 10px;
+  color:black;
+  font-size: 54px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.left-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; 
+  width: 0px; 
+  background-image: url('images/taco_margin.webp');
+  background-size: cover;
+  
+}
+
+
+.right-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh; /* 100% of viewport height */
+  width: 0px; 
+  background-image: url('images/taco_margin.webp'); /* Left side background image */
+  background-size: cover; /* Cover the entire container */
+}
+
+/* to adjust for screen size */
+/* Styles for medium screens */
+@media (min-width: 768px) {
+  .left-side,
+  .right-side {
+    width: 100px; /* Adjust width for medium screens */
+  }
+}
+/* Styles for medium screens */
+@media (min-width: 1200px) {
+  .left-side,
+  .right-side {
+    width: 300px; /* Adjust width for medium screens */
+  }
+}
+
+.image-style {
+  width: 500px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.button-style {
+  color: white;
+  background-color: rgb(63, 2, 2);
+  font-size: 24px;
+  border: none;
+  border-radius: 32px;
+  margin: 10px;
+  cursor: hand;
+  padding: 10px 75px;
+}
+
+.form-style {
+  padding: 10px;
+  font-size: 20px;
+  margin-left: 5px;
+
+}
